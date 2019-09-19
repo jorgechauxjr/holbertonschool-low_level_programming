@@ -1,12 +1,12 @@
 #include <stdio.h>
 /**
  * main - entry point
- * Desc: Use `putchar` function to print the alphabet.
+ * Description: print the alphabet using putchar.
  * Return: 0
  */
 int main(void)
 {
-	char letter ='a';
+	char letter = 'a';
 	char z = 'z';
 
 	while (letter <= z)
@@ -15,5 +15,6 @@ int main(void)
 		letter++;
 	}
 	putchar ('\n');
+
 	return (0);
 }
