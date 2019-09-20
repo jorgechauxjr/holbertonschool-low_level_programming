@@ -22,8 +22,8 @@ int main(void)
 			if (letter == 'e')
 			{
 				letter++;
-}
-}
+			}
+		}
 		putchar (letter);
 		letter++;
 	}
