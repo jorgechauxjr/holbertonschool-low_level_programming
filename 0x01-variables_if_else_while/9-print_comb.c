@@ -12,14 +12,17 @@ int main(void)
 	int max = 57;
 /*el 48 es 0 en asci y el 57 es 9 en asci */
 
-	while (number != max)
+	while (number <= max)
 	{
 		putchar (number);
-		putchar (',');
-		putchar (' ');
+		if (number < max)
+		{
+			putchar (',');
+			putchar (' ');
+		}
+
 		number++;
 	}
-	putchar (57);
 	putchar ('\n');
 
 	return (0);
