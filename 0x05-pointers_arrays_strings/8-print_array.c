@@ -12,13 +12,13 @@ void print_array(int *a, int n)
 {
 	int c;
 
-	for (c = 0; c <= n; c++)
+/*the array counts from position 0 for that reason I used n -1 */
+	for (c = 0; c < n - 1; c++)
 	{
-/*if c!=0 only print integer with coma and space */
-		if (!(c == n))
-			printf("%d, ", a[c]);
-		else
-			printf("%d", a[c]);
+		printf("%d, ", a[c]);
 	}
+	if (c == n - 1)
+		printf("%d", a[c]);
+
 	printf("\n");
 }
