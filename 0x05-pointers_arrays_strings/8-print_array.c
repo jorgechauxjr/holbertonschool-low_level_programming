@@ -14,6 +14,7 @@ void print_array(int *a, int n)
 
 	for (c = 0; c <= n; c++)
 	{
+/*if c!=0 only print integer with coma and space */
 		if (!(c == n))
 			printf("%d, ", a[c]);
 		else
