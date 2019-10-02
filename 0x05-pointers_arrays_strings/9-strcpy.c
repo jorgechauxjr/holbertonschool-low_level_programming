@@ -20,7 +20,7 @@ char *_strcpy(char *dest, char *src)
 		if (src[c] == '\0')
 			dest[c + 1] = src[c + 1];
 	}
-	printf("\n");
+	
 	return (dest);
 
 }
