@@ -19,7 +19,7 @@ char *_strcpy(char *dest, char *src)
 
 		c++;
 	}
-	dest[c + 1] = src[c + 1];
+	dest[c] = src[c];
 
 
 	return (dest);
