@@ -10,6 +10,9 @@
  **/
 void reverse_array(int *a, int n)
 {
+	int i;
+	char ch;
+
 /* n-- is n = n-1 because the last position is garbage*/
 	n--;
 
