@@ -14,11 +14,10 @@ char *_strchr(char *s, char c)
 	for (i = 0; s != '\0'; i++)
 	{
 		if (s[i] == c)
-		{
 			return (&s[i]);
-		}
-	}
-	if (s[i] == '\0')
+       }
+	if (s[i] == c)
+	return (&s[i]);
 	return (0);
 /*
  *     &s[i] is equal to (s + 1) is a pointer, it means adress of.
