@@ -18,6 +18,7 @@ char *_strchr(char *s, char c)
 			return (&s[i]);
 		}
 	}
+	if (s[i] == '\0')
 	return (0);
 /*
  *     &s[i] is equal to (s + 1) is a pointer, it means adress of.
