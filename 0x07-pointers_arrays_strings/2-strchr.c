@@ -9,18 +9,17 @@
  **/
 char *_strchr(char *s, char c)
 {
-	int i;
+	char *ptr = s;
 
-	for (i = 0; s != '\0'; i++)
+	if (s == NULL)
+		return (NULL);
+
+	while (*ptr != '\0')
 	{
-		if (s[i] == c)
-			return (s + i);
+		if (*ptr == c)
+			return (ptr);
+
+		ptr++;
 	}
-	if (s[i] == c)
-	return (s + i);
-	return ('\0');
-/*
- *     &s[i] is equal to (s + 1) is a pointer, it means adress of.
- *      *(s+1) is equal to s[1] value of
- */
+	return (ptr);
 }
