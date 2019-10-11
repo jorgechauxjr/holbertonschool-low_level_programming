@@ -1,0 +1,6 @@
+#!/bin/bash
+#./c 'file_to_create'  'first_line' 'second_line'
+echo $2 >> $1
+echo $3 >> $1
+echo 'File created: ' $1
+echo 'File created with: '; head $1
