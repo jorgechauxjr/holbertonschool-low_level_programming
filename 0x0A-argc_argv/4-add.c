@@ -11,7 +11,7 @@ int isChar(char *p)
 {
 	int n;
 
- 	while (*p != '\0')
+	while (*p != '\0')
 	{
 		n = *p;
 /*si es numero, mire la sig posicion*/
