@@ -9,7 +9,7 @@
 char *_strdup(char *str)
 {
 	char *cpstr;
-	int x;
+	int x,lg;
 
 	if (str == NULL)
 	{
@@ -17,13 +17,17 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		cpstr = malloc(sizeof(str));
+		for (lg = 0; str[lg] != '\0'; lg++)
+		{
+		}
+		cpstr = malloc(lg * sizeof(char)+1);
 		if (cpstr != NULL)
 		{
-			for (x = 0; str[x] != '\0'; x++)
+			for (x = 0; x < lg; x++)
 			{
 				cpstr[x] = str[x];
 			}
+			cpstr[lg] == '\0';
 			return (cpstr);
 		}
 		else
@@ -31,5 +35,4 @@ char *_strdup(char *str)
 			return (NULL);
 		}
 	}
-	return (NULL);
 }
