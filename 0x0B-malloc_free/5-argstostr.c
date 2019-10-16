@@ -15,13 +15,5 @@ char *argstostr(int ac, char **av)
 	if ((ac == 0) || (av == NULL))
 		return (NULL);
 
-	for (c = 0; c < ac; c++)
-	{
-		for (c2 = 0; c2 < ac; c2++, c3++)
-		{
-			p[c3] = av[c][c2];
-		}
-	}
-	return (p);
 
 }
