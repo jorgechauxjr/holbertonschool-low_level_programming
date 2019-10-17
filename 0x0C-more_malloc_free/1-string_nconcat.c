@@ -38,8 +38,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		for (c3 = 0; s1[c3] != '\0'; c3++)
 			pconcat[c3] = s1[c3];
 
-		for (c4 = 0; s2[c4] != '\0'; c4++, c3++)
-			pconcat[c3] = s2[c4];
+		for (c4 = 0; s2[c4] != '\0'; c4++)
+		{
+		pconcat[c3] = s2[c4];
+		c3++;
+		}
 
 		pconcat[c3] = '\0';
 
