@@ -17,16 +17,16 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	arr = malloc(nmemb * size);
 
-	if (arr != NULL)
+	if (arr == NULL)
+	{
+		return (NULL);
+	}
+	else
 	{
 		for (c = 0; c < size; c++)
 			arr[c] = 0;
 
 		return (arr);
-	}
-	else
-	{
-		return (NULL);
 	}
 	return (NULL);
 }
