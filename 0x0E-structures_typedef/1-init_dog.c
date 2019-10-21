@@ -1,4 +1,6 @@
 #include "dog.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  **init_dog -main entry.
  *@d: pointer to struct
