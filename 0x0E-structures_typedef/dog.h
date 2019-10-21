@@ -1,5 +1,5 @@
-#ifndef dog
-#define dog
+#ifndef TASK3
+#define TASK3
 /**
  *struct dog -main entry.
  *@name: pointer to a char
@@ -15,4 +15,4 @@ struct dog
 	char *owner;
 };
 
-#endif /* dog */
+#endif /* TASK3 */
