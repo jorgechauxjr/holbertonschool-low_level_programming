@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int x, y, r;
+	int (*p_func)(int, int);
 
 
 	if (argc != 4)
@@ -18,7 +19,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	int (*p_func)(int, int);
 
 /*recibo el codigo no string o dato CODIGO por ser puntero a una funcion*/
 
@@ -34,6 +34,6 @@ int main(int argc, char *argv[])
 	r = p_func(x, y);
 
 	printf("%d\n", r);
-
+	return (0);
 
 }

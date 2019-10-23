@@ -1,4 +1,7 @@
-#include "function_pointers.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "3-calc.h"
 /**
  * get_op_func - cont the function that will perform the operation ask b user
  * @s: pointer to function
