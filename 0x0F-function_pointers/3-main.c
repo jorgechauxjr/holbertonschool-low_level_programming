@@ -29,6 +29,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
+	if (sizeof(argv[2])/sizeof(argv[2][0]) != 1)
+		{
+			printf("Error\n");
+			exit(99);
+		}
 	x = atoi(argv[1]);
 	y = atoi(argv[3]);
 	r = p_func(x, y);
