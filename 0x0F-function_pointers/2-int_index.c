@@ -4,6 +4,7 @@
  * @array: input array
  * @size: size of the array
  * @cmp: pointer to the function
+ *Return: int
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
@@ -11,18 +12,18 @@ int int_index(int *array, int size, int (*cmp)(int))
 	{
 	int n, c;
 
-	if(size <= 0)
+	if (size <= 0)
 		return (-1);
 
 	for (c = 0; c < size; c++)
 	{
 		n = cmp(array[c]);
 
-		if(n != 0)
+		if (n != 0)
 		{
 			return (c);
 		}
 	}
 	}
 	return (-1);
-     }
+}
