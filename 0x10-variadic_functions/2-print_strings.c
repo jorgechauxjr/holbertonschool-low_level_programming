@@ -12,9 +12,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int c;
 	char *word;
 
-	if (separator == NULL)
-		return;
-
 	va_start(my_list, n); /*Initialize the argument list*/
 
 	for (c = 0; c < n; c++)
@@ -32,9 +29,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (c < n - 1 && separator != NULL)
 			printf("%s", separator);
 	}
-
-	printf("\n");
-
 	va_end(my_list); /*Clean up*/
-
-	}
+	printf("\n");
+}
