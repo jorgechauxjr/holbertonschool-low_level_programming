@@ -29,7 +29,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("%s", word);
 		}
-		if (c < n - 1 && my_list != NULL)
+		if (c < n - 1 && separator != NULL)
 			printf("%s", separator);
 	}
 
