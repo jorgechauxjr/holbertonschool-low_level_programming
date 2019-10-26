@@ -12,22 +12,24 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int c;
 	int num;
 
-	if (separator == NULL)
-		return;
-
-	va_start(my_list, n); /*Initialize the argument list*/
-
-	for (c = 0; c < n; c++)
+	if (separator != NULL)
 	{
-		num = va_arg(my_list, int); /*  get the next argument value */
-		printf("%d", num);
 
-		if (c < n - 1 && my_list != NULL)
-			printf("%s", separator);
+		va_start(my_list, n); /*Initialize the argument list*/
+
+		for (c = 0; c < n; c++)
+		{
+			num = va_arg(my_list, int); /*  get the next argument value */
+			printf("%d", num);
+
+			if (c < n - 1 && my_list != NULL)
+				printf("%s", separator);
+		}
+
+		printf("\n");
+
+		va_end(my_list); /*Clean up*/
+
 	}
 
-	printf("\n");
-
-	va_end(my_list); /*Clean up*/
-
-	}
+}
