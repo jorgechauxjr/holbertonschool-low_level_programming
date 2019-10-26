@@ -17,7 +17,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 		for (c = 0; c < n; c++)
 		{
-			num = va_arg(my_list, unsigned int); /*  get the next argument value */
+			num = va_arg(my_list, int); /*  get the next argument value */
 			printf("%d", num);
 
 			if (c < n - 1 && my_list != NULL)
