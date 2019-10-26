@@ -77,7 +77,7 @@ void print_all(const char * const format, ...)
 		c2 = 0;
 		while (c2 < 4)
 		{
-			if (format[c] == *(arr_fmt[c2].p_type)
+			if (format[c] == *(arr_fmt[c2].p_type))
 				{
 					arr_fmt[c2].func(my_list, sep);
 					sep = ", ";
