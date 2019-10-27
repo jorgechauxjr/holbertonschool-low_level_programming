@@ -10,7 +10,7 @@
  **/
 void _printchar(va_list list, char *sep)
 {
-	printf("%s%c", sep, va_arg(list, int));
+	printf("%s%c", sep, va_arg(list, int)); /*char made cast to int*/
 }
 /**
  * _printint -function that prints int.
@@ -33,7 +33,7 @@ void _printint(va_list list, char *sep)
  **/
 void _printfloat(va_list list, char *sep)
 {
-	printf("%s%f", sep, va_arg(list, double));
+	printf("%s%f", sep, va_arg(list, double)); /*float made cast to double*/
 }
 /**
  * _printstring -function that prints string.
@@ -59,33 +59,41 @@ s = va_arg(list, char *);
  **/
 void print_all(const char * const format, ...)
 {
-	int c = 0, c2;
-	va_list my_list;
+	int c = 0, j;
+	va_list a_list;
 	char *sep = "";
 
+/*arr_fmt array of type structure with typdef get_format*/
+
 	get_format arr_fmt[] = {
-		{"c", _printchar},
-		{"f", _printfloat},
-		{"s", _printstring},
-		{"i", _printint},
+		{"c", _printchar}, /*position 0 of arr_fmt*/
+		{"f", _printfloat}, /*position 1 of arr_fmt*/
+		{"s", _printstring}, /*s is member p_type in struct variadic.h*/
+		{"i", _printint},  /* _printin is member of *func in structure*/
 		{NULL, NULL}
 	};
-	va_start(my_list, format); /*Initialize the argument list*/
+	va_start(a_list, format); /*Initialize the argument list*/
+
+/*format is the string "ceis"*/
+
 
 	while (format != NULL && format[c] != '\0')
 	{
-		c2 = 0;
-		while (c2 < 4)
+
+		j = 0;
+		while (*(arr_fmt[j].func) != NULL)
 		{
-			if (format[c] == *(arr_fmt[c2].p_type))
-				{
-					arr_fmt[c2].func(my_list, sep);
-					sep = ", ";
-				}
-				c2++;
+
+			if (format[c] == *(arr_fmt[j].p_type))
+			{
+				arr_fmt[j].func(a_list, sep);
+				sep = ", ";
+				break;
+			}
+			j++;
 		}
 		c++;
 	}
 	printf("\n");
-	va_end(my_list);
+	va_end(a_list);
 }
