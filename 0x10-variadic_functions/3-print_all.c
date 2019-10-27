@@ -14,7 +14,6 @@ void _printchar(va_list list)
 /**
  * _printint -function that prints int.
  * @list: va_list
- * @sep: char pointer
  * Return: void
  **/
 void _printint(va_list list)
@@ -27,7 +26,6 @@ void _printint(va_list list)
  * _printfloat -function that prints float.
  *Description: Prints float
  * @list: va_list
- * @sep: char pointer
  * Return: void
  **/
 void _printfloat(va_list list)
@@ -37,7 +35,6 @@ void _printfloat(va_list list)
 /**
  * _printstring -function that prints string.
  * @list: va_list
- * @sep: char pointer
  * Return: void
  **/
 void _printstring(va_list list)
