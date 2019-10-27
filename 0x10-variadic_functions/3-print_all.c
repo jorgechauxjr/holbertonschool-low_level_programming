@@ -5,12 +5,11 @@
  * _printchar -function that prints char.
  *Description: prints char
  * @list: va_list
- * @sep: char pointer
  * Return: void
  **/
-void _printchar(va_list list, char *sep)
+void _printchar(va_list list)
 {
-	printf("%s%c", sep, va_arg(list, int)); /*char made cast to int*/
+	printf("%c", va_arg(list, int)); /*char made cast to int*/
 }
 /**
  * _printint -function that prints int.
@@ -18,9 +17,9 @@ void _printchar(va_list list, char *sep)
  * @sep: char pointer
  * Return: void
  **/
-void _printint(va_list list, char *sep)
+void _printint(va_list list)
 {
-	printf("%s%d", sep, va_arg(list, int));
+	printf("%d", va_arg(list, int));
 }
 
 
@@ -31,9 +30,9 @@ void _printint(va_list list, char *sep)
  * @sep: char pointer
  * Return: void
  **/
-void _printfloat(va_list list, char *sep)
+void _printfloat(va_list list)
 {
-	printf("%s%f", sep, va_arg(list, double)); /*float made cast to double*/
+	printf("%f",va_arg(list, double)); /*float made cast to double*/
 }
 /**
  * _printstring -function that prints string.
@@ -41,7 +40,7 @@ void _printfloat(va_list list, char *sep)
  * @sep: char pointer
  * Return: void
  **/
-void _printstring(va_list list, char *sep)
+void _printstring(va_list list)
 {
 	char *s;
 
@@ -49,7 +48,7 @@ s = va_arg(list, char *);
 	if (s == NULL)
 		s = "(nil)";
 
-	printf("%s%s", sep, s);
+	printf("%s", s);
 }
 
 /**
@@ -86,6 +85,7 @@ void print_all(const char * const format, ...)
 
 			if (format[c] == *(arr_fmt[j].p_type))
 			{
+				printf("%s", sep);
 				arr_fmt[j].func(a_list, sep);
 				sep = ", ";
 				break;
