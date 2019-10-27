@@ -32,7 +32,7 @@ void _printint(va_list list)
  **/
 void _printfloat(va_list list)
 {
-	printf("%f",va_arg(list, double)); /*float made cast to double*/
+	printf("%f", va_arg(list, double)); /*float made cast to double*/
 }
 /**
  * _printstring -function that prints string.
