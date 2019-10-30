@@ -1,6 +1,6 @@
 section .data
 	msg db "Hello, Holberton", 10
-
+1 equ $-msg
 section .text
 	global main
 main:
@@ -13,3 +13,4 @@ main:
 	mov rax, 60
 	mov rdi, 0
 	syscall
+	end:
