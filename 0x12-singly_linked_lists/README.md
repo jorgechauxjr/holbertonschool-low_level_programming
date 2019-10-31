@@ -1,1 +1,1 @@
-0x12. C - Singly linked lists at Holberton School
+0x12. C - Singly linked lists at Holberton School.
