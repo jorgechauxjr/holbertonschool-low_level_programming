@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * print_list -print list.
+ * list_len -print list.
  *Description: Function that prints content of a single linked list
  * @h: pointer to a structure typedef list_t
  * Return: the number of nodes
