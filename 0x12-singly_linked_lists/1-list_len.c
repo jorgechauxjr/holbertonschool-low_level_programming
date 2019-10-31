@@ -4,7 +4,7 @@
 #include "lists.h"
 /**
  * list_len -print list.
- *Description: Function that prints content of a single linked list
+ *Description: Function returns the number of elements in a linked list_t list
  * @h: pointer to a structure typedef list_t
  * Return: the number of nodes
  **/
