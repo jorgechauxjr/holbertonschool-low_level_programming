@@ -17,8 +17,9 @@ void free_listint2(listint_t **head)
 
 	while (temp) /*The same as while (temp != NULL)*/
 	{
-	free(temp);
-	temp = temp->next;
+		temp = temp->next; /*I assign the next to temp*/
+		free(*head); /*free head*/
+		*head =	temp; /*the new head is temp, it means the next positi*/
 	}
 	*head = NULL; /*The function sets the head to NULL*/
 
