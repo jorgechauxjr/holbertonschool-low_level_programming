@@ -1,0 +1,42 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "lists.h"
+/**
+ * delete_nodeint_at_index -delete node
+ * Description: Function that deletes the node at index index of a listint.
+ * @head: pointer to a pointer of type listint_t (structure
+ * @index: the inde of the node that should be deleted, index starts at 0
+ * Return: 1 if succeed, -1 if it failed.
+ **/
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
+{
+	listint_t *temp;
+	unsigned int i;
+
+	if (*head == NULL)
+		return (-1);
+
+	temp = *head;
+
+	if (index == 0) /*if the index is 0 I delete the node cero*/
+	{
+		free(temp);
+		*head = temp->next;
+	}
+	else
+	{
+		for (i = 1; i < index; i++)
+		{
+/*temp goes to the next node until it get to one position before the index*/
+			temp = temp->next;
+		}
+/*because is one position before the index, I free (delete) the next node*/
+/* that is the one I need to delete*/
+		free(temp->next);
+		temp->next = temp->next->next;
+		if (temp == NULL)
+			return (-1);
+	}
+	return (1);
+
+}
