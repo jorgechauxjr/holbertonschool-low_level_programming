@@ -11,7 +11,7 @@ void free_listint(listint_t *head)
 {
 	if (head != NULL) /*validate that the pointer is not null*/
 	{
-		if (head->next != NULL) 
+		if (head->next != NULL)
 			free_listint(head->next);
 
 		free(head);
