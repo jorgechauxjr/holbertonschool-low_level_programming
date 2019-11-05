@@ -20,9 +20,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (index == 0) /*if the index is 0 I delete the node cero*/
 	{
-		temp = temp->next;
-		free(*head);
-		*head = temp;
+		temp = temp->next; /*temp is going to point to the next node*/
+		free(*head); /*free head (the zero node)*/
+		*head = temp; /*the new head is going to be temp*/
 	}
 	else
 	{
@@ -36,7 +36,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 /*temp goes to the next node until it get to one position before the index*/
 			temp = temp->next;
 		}
+/*I assign temp to copy*/
 		copy = temp;
+/*copy=copy->next->next save copy of the node ahead the node Im going t delete*/
 		copy = copy->next->next;
 /*because is one position before the index, I free (delete) the next node*/
 /* that is the one I need to delete*/
