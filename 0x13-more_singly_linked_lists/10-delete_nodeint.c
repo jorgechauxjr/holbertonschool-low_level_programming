@@ -38,7 +38,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		}
 /*I assign temp to copy*/
 		copy = temp;
-/*copy=copy->next->next save copy of the node ahead the node Im going t delete*/
+/*=copy->next->next save copy of the node ahead the node Im going to delete*/
 		copy = copy->next->next;
 /*because is one position before the index, I free (delete) the next node*/
 /* that is the one I need to delete*/
