@@ -19,7 +19,7 @@ int sum_listint(listint_t *head)
  * if temp is null, it means it is in the last node. For that reason the
  * condition is: while temp diferent from NULL
  */
-	for (sum = 0; temp != NULL; sum++)
+	for (sum = 0; temp != NULL;)
 	{
 /*sum of each data (n) ele,ents of the list*/
 		sum += temp->n;
