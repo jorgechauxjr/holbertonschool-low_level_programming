@@ -27,6 +27,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		for (i = 1; i < index; i++)
 		{
+/*Validate if the index given does not exist, return -1*/
+/*Ex:My list have 2 Nodes and they told me to delete idx 5*/
+/*it returns -1 because it does not exist*/
 			if (temp->next == NULL)
 				return (-1);
 /*temp goes to the next node until it get to one position before the index*/
