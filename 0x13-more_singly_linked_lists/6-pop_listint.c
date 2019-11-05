@@ -17,7 +17,8 @@ int pop_listint(listint_t **head)
 
 /*pointer temp receives address of the node that goes after head*/
 	temp = (*head)->next;
-/*I assign to num the value of n (integer member in the structure of the head)*/
+	/*I assign to num the value of n*/
+/* (integer member in the structure of the head)*/
 	num = (*head)->n;
 /*I aply free to head*/
 	free(*head);
