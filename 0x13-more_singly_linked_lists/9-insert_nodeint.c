@@ -29,6 +29,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 /*the member newNode->next I assigned the addres of head*/
 		newNode->next = *head;
 		*head = newNode;
+		return (newNode);
 	}
 	while (idx > 0)
 	{
