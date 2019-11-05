@@ -15,11 +15,15 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	if (head == NULL)
 		return (0);
 
-/*pointer temp receives address of the node that goes after head*/
+/*pointer temp is a copy of head*/
 	temp = head;
 
 	while (index > 0) /*index is the nth node of the list*/
 	{
+		if (temp->next == NULL)
+		{
+			return (NULL);
+		}
 		temp = temp->next; /*temp will point to the next node*/
 		index--;
 	}
