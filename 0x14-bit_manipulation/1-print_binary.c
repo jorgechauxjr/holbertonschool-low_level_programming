@@ -10,7 +10,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int mask = n;
-	int contBits;
+	int contBits = 0;
 
 	if (n == 0)
 	{
