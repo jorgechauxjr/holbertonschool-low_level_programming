@@ -9,8 +9,8 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask, copy = n;
-	int contBits = 0;
+	unsigned long int mask = 1, copy = n;
+	unsigned long int contBits = 0;
 
 	if (n == 0)
 	{
@@ -23,11 +23,11 @@ void print_binary(unsigned long int n)
 		copy = copy >> 1;
 		contBits++;
 	}
-	mask = 1 << (contBits - 1);
+	mask = mask << (contBits - 1);
 
 	while (mask) /*m != 0*/
 	{
-		if (n & mask)
+		if (mask & n)
 		{
 			_putchar('1');
 		}
