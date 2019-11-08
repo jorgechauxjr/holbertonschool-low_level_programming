@@ -7,7 +7,6 @@
  *Description: function that returns the number of bits you would need
  * Return: 1 if succed -1 otherwise
  **/
-
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	int c = 0;
@@ -17,11 +16,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	while (n > 0)
 	{
 		if (n & 1)
-		{
 			c++;
-		}
+
 		n = n >> 1; /*disminuir n*/
 	}
-
 	return (c);
 }
