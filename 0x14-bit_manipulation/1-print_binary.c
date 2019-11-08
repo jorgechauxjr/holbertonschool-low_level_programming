@@ -9,32 +9,28 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 1, copy = n;
-	unsigned long int contBits = 0;
+	unsigned long int mask = 1, copy = n; /*copy of int in binary*/
+	unsigned long int contBits = 0; /*counter of bits*/
 
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-
-	while (copy) /*mask != 0*/
+	while (copy) /*copy != 0*/
 	{
 		copy = copy >> 1;
 		contBits++;
 	}
 	mask = mask << (contBits - 1);
 
-	while (mask) /*m != 0*/
+	while (mask) /*mask != 0*/
 	{
 		if (mask & n)
-		{
 			_putchar('1');
-		}
 		else
-		{
 			_putchar('0');
-		}
+
 		mask = mask >> 1;
 	}
 }
