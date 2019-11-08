@@ -7,7 +7,6 @@
  *Description: function that set the value 0  a bit at a given index.
  * Return: 1 if succed -1 otherwise
  **/
-
 int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int mask = 1;
