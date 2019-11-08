@@ -27,7 +27,7 @@ int _power(int base, int exponent)
 	int result = 1;
 
 	for (; exponent > 0; exponent--)
-       		result = result * base;
+		result = result * base;
 
 	return (result);
 }
@@ -55,7 +55,7 @@ unsigned int binary_to_uint(const char *b)
 		if ((n == 0) || (n == 1))/*validate it us a binary number*/
 		{
 /*len -1 beacuse from rigth to left it start from zero*/
-/*to calculate bin to decim from rigth to left is: 2^0*bin+2^2*bin+2^3*bin... */
+/*to calculate bin to decim from rigth to left is: 2^0*bin+2^2*bin+2^3*bin.. */
 			pw = _power(2, (len - 1));
 /*the sum of the powers is the number in decimal*/
 			num = num + (n * pw);
