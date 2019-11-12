@@ -18,7 +18,7 @@ int create_file(const char *filename, char *text_content)
 /* return file descriptor*/
 /*O_RDWR read and write permissions*/
 /*O_TRUNC if file exists and allow write it will be truncated to length 0*/
-/*600 rw permission for owner and all no permission*/
+/*600 rw permission for owner. Group and all have no permission*/
 	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 
 	if (fd == -1)
