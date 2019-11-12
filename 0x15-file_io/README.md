@@ -31,7 +31,7 @@
 - All your header files should be include guarded
 - Tip: always prefer using symbolic constants (POSIX) vs numbers when it makes sense. For instance read(STDIN_FILENO, ... vs read(0, ...
 
-## Tasks
+## Tasks:
 - 0 - Function that reads a text file and prints it to the POSIX standard output.
 - 1 - Function that creates a file.
 - 2 - Function that appends text at the end of a file.
