@@ -1,14 +1,12 @@
 # Project 0x14.
-##C - Bit manipulation
-###Learning Objectives
-###General
+## C - Bit manipulation
+### Learning Objectives
+### General
 - Look for the right source of information without too much help
 - How to manipulate bits and use bitwise operators
-##Requirements
+## Requirements
 
-###General
-
-
+### General
 - Allowed editors: vi, vim, emacs
 - All your files will be compiled on Ubuntu 14.04 LTS
 - Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
@@ -24,3 +22,14 @@
 - The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called holberton.h
 - Dont forget to push your header file
 - All your header files should be include guarded
+
+### Tasks
+- 0 - Function that converts a binary number to an unsigned int.
+- 1 - Function that prints the binary representation of a number.
+- 2 - Function that returns the value of a bit at a given index.
+- 3 - Function that sets the value of a bit to 1 at a given index.
+- 4 - Function that sets the value of a bit to 0 at a given index.
+- 5 - Function that returns the number of bits you would need to flip to get from one number to another.
+- 6 - Function that checks the endianness.
+- 7 - Find the password for this program.
+- 8 - Write a blog post on how integers are stored in memory using twos complement.
