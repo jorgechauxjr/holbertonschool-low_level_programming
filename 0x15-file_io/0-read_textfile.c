@@ -29,15 +29,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 /*from disc to ram, the letters are transfered to my buf in ram*/
 	rd = read(fd, buf, letters);
 	if (rd == -1)
+	{
 		free(buf);
 		return (0);
+	}
 /*copy from ram to stdoutput not in disk, stdout:*/
 /*special file that point to the terminal*/
 	wr = write(STDOUT_FILENO, buf, rd);
 
 	if (wr == -1)
+	{
 		free(buf);
 		return (0);
+	}
 
 	close(fd);
 	free(buf);
