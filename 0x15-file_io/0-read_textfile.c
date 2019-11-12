@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * read_textfile -add node to list.
+ * read_textfile -.
  *Description: function that reads a text file and prints it to the std output
  * @filename: contain the name of the file to read
  * @letters: number of letters to read
@@ -24,7 +24,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (buf == NULL)
 		return (0);
-
 /*we use file descriptor to do thigns to the file (read or writwe, etc)*/
 /*from disc to ram, the letters are transfered to my buf in ram*/
 	rd = read(fd, buf, letters);
@@ -42,10 +41,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buf);
 		return (0);
 	}
-
 	close(fd);
 	free(buf);
 
 	return (wr);
-
 }
