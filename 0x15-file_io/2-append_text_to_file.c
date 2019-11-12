@@ -13,13 +13,9 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-
-/*func open with O_CREAT as parameter creates the file if it doesnt exist and*/
-/* return file descriptor*/
-/*O_RDWR read and write permissions*/
-/*O_TRUNC if file exists and allow write it will be truncated to length 0*/
+/*O_RDWR read and write permissions O_APPEND append text*/
 /*600 rw permission for owner. Group and all have no permission*/
-	fd = open(filename, O_RDWR | O_APPEND);
+	fd = open(filename, O_RDWR | O_APPEND, 0600);
 
 	if (fd == -1)
 		return (-1);
