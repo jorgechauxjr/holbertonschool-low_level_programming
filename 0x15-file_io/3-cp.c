@@ -3,8 +3,8 @@
 /**
  * errorMsg - Print error message
  * @exitCode: exit code to stop
- * @format: data
- * @s: data
+ * @msg: the error message to be printed
+ * @fileName: the name of the file
  */
 void errorMsg(int exitCode, const char *msg, const char *fileName)
 {
@@ -32,10 +32,12 @@ int main(int argc, char **argv)
 	fd_from = open(argv[1],O_RDONLY);
 
 	if (fd_from == -1)
-		errorMsg(98, "Error: Can't write to", argv[2]);
+		errorMsg(98, "Error: Can't write to", argv[1]);
 
 	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
+	if (fd_to == -1)
+		errorMsg(99, "Error: Can't write to", argv[2]);
 
 
 }
