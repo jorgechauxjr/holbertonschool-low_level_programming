@@ -12,7 +12,6 @@ void errorMsg(int exitCode, const char *msg, const char *fileName)
 	exit(exitCode);
 }
 
-
 /**
  * main - entry point
  * @argc: argument count
@@ -21,15 +20,15 @@ void errorMsg(int exitCode, const char *msg, const char *fileName)
  */
 int main(int argc, char **argv)
 {
-	int fd_from, fd_to, rd_stat, wr_stat;
-	char buffer[1024];
+	int fd_from, fd_to, rd, wr_stat, bz = 1024, cl;
+	char buf[bz];
 
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
 		exit(97);
 	}
-	fd_from = open(argv[1],O_RDONLY);
+	fd_from = open(argv[1], O_RDONLY);
 
 	if (fd_from == -1)
 		errorMsg(98, "Error: Can't write to", argv[1]);
@@ -39,5 +38,19 @@ int main(int argc, char **argv)
 	if (fd_to == -1)
 		errorMsg(99, "Error: Can't write to", argv[2]);
 
+	for (rd = read(fd_from, buf, bz); rd > 0; rd = read(fd_from, buf, bz))
+	{
+		cp = write(fd_to, buf, rd);
+		if (cp == -1)
+			errorMsg(99, "Error: Can't write to", argv[2]);
+	}
+	if (rd == -1)
+		errorMsg(98, "Error: Can't read from file", argv[1]);
 
+	cl = close(fd_from);
+
+	if (cl == -1)
+		errorMsg(100, "Error: Can't close fd", argv[2]);
+
+	return (0);
 }
