@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 			errorMsg(99, "Error: Can't write to", argv[2]);
 	}
 	if (rd == -1)
-		errorMsg(98, "Error: Can't read from file", argv[1]);
+		errorMsg(100, "Error: Can't read from file", argv[1]);
 
 	cl = close(fd_from);
 
