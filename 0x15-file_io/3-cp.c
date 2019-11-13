@@ -20,12 +20,12 @@ void errorMsg(int exitCode, const char *msg, const char *fileName)
  */
 int main(int argc, char **argv)
 {
-	int fd_from, fd_to, rd, wr_stat, bz = 1024, cl;
-	char buf[bz];
+	int fd_from, fd_to, rd, wr, bz = 1024, cl;
+	char buf[1024];
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	fd_from = open(argv[1], O_RDONLY);
@@ -40,8 +40,8 @@ int main(int argc, char **argv)
 
 	for (rd = read(fd_from, buf, bz); rd > 0; rd = read(fd_from, buf, bz))
 	{
-		cp = write(fd_to, buf, rd);
-		if (cp == -1)
+		wr = write(fd_to, buf, rd);
+		if (wr == -1)
 			errorMsg(99, "Error: Can't write to", argv[2]);
 	}
 	if (rd == -1)
