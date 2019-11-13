@@ -37,3 +37,5 @@
 - 2 - Function that appends text at the end of a file.
 - 3 - Program that copies the content of a file to another file.
 - 4 - Program that displays the information contained in the ELF header at the start of an ELF file.
+
+#####Coding Style: [Betty Style](https://github.com/holbertonschool/Betty/wiki)
