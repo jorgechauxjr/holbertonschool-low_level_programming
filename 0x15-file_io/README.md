@@ -1,4 +1,4 @@
-# Project 0x15. C - File I/O
+B# Project 0x15. C - File I/O
 ## Learning Objectives
 ### General
 - Look for the right source of information online
@@ -38,4 +38,4 @@
 - 3 - Program that copies the content of a file to another file.
 - 4 - Program that displays the information contained in the ELF header at the start of an ELF file.
 
-#####Coding Style: [Betty Style](https://github.com/holbertonschool/Betty/wiki)
+##### Coding Style: [Betty Style](https://github.com/holbertonschool/Betty/wiki)
