@@ -7,7 +7,9 @@ gcc -Wall -pedantic -Werror -Wextra 0-main.c 0-read_textfile.c -o a
 ./a Requiescat
 - 1-main
 gcc -Wall -pedantic -Werror -Wextra 1-main.c 1-create_file.c -o b
+
 ./b hello world
+
 ls -l hello
 
 - 2-main
