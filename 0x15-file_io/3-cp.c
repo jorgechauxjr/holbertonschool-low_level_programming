@@ -20,7 +20,7 @@ void errorMsg(int exitCode, const char *msg, const char *fileName)
  */
 int main(int argc, char **argv)
 {
-	int fd_from, fd_to, rd, wr, bz = 1024, cl;
+	int fd_from, fd_to, rd, wr, bz = 1024, cl_from, cl_to;
 	char buf[1024];
 
 	if (argc != 3)
@@ -47,15 +47,15 @@ int main(int argc, char **argv)
 	if (rd == -1)
 		errorMsg(98, "Error: Can't read from file", argv[1]);
 
-	cl = close(fd_from);
+	cl_from = close(fd_from);
 
-	if (cl == -1)
-		errorMsg(100, "Error: Can't close fd", argv[2]);
-
-	cl = close(fd_to);
-
-	if (cl == -1)
+	if (cl_from == -1)
 		errorMsg(100, "Error: Can't close fd", argv[1]);
+
+	cl_to = close(fd_to);
+
+	if (cl_to == -1)
+		errorMsg(100, "Error: Can't close fd", argv[2]);
 
 	return (0);
 }
