@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 	fd_from = open(argv[1], O_RDONLY);
 
 	if (fd_from == -1)
-		errorMsg(98, "Error: Can't write to", argv[1]);
+		errorMsg(98, "Error: Can't read from file", argv[1]);
 
 	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
