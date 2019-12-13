@@ -3,8 +3,8 @@
 #include "lists.h"
 /**
  * print_dlistint -print list.
- *Description: Function that prints content of a single linked list
- * @h: pointer to a structure typedef list_t
+ *Description: Function that prints content of a doubly linked list
+ * @h: Head of the lis. Pointer to a structure dlistint_s
  * Return: the number of nodes
  **/
 size_t print_dlistint(const dlistint_t *h)
