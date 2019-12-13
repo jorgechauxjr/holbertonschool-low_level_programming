@@ -17,21 +17,19 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	if (newNode == NULL)
 		return (NULL);
 
-/*If no head there will be no previous for that reason validate if head null*/
+	newNode->n = n;
+	newNode->prev = NULL;
+
+/*if empty list, new is the only node, so new->next is going to be null*/
 	if (*head == NULL)
 	{
-		newNode->n = n;
-		newNode->prev = NULL;
 		newNode->next = NULL;
 		*head = newNode;
 		return (newNode);
 	}
-	newNode->n = n;
-	newNode->prev = NULL; /*For that reason the validation previous*/
+/*if is not empty list, asign the new->next the head*/
 	newNode->next = *head;
-
 	(*head)->prev = newNode;
-
 	*head = newNode;
 
 	return (newNode);
