@@ -17,12 +17,18 @@ newNode = malloc(sizeof(dlistint_t));
 		return (NULL);
 	newNode->n = n;
 
-	if (temp == NULL)
+	if (*h == NULL)
+	{
+		if (idx > 0)
+		{
+			free(newNode);
+			return (NULL);
+		}
 		newNode->prev = NULL;
 	newNode->next = NULL;
 	*h = newNode;
-		return (NULL);
-
+		return (newNode);
+		}
 	if (idx == 0)
 	{
 		newNode->next = temp;
