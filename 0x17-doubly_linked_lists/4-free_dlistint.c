@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * free_listint -free list.
+ * free_dlistint -free list.
  *Description: Function that frees a dlist_t list
  * @head: Head of the list. Pointer to a structure dlistint_s
  * Return: void.
