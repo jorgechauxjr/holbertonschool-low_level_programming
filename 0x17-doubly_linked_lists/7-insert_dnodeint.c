@@ -4,7 +4,7 @@
 /**
  * insert_dnodeint_at_index -add node to list.
  * Description: Function that adds a new node in an index position of list
- * @head: Head of the list. Pointer to a structure dlistint_s
+ * @h: Head of the list. Pointer to a structure dlistint_s
  * @idx: int that represents the index, where the node is going to be inserted
  * @n: integer value of the structure
  * Return: the address of the new element or NULL if fail (the new node)
