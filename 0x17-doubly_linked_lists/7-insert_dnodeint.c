@@ -41,10 +41,7 @@ newNode = malloc(sizeof(dlistint_t));
 			free(newNode);
 			return (NULL);
 		}
-		newNode->prev = NULL;
-	newNode->next = NULL;
-	*h = newNode;
-		return (newNode);
+		return (add_dnodeint(h, n));
 		}
 	if (idx == 0)
 	{
@@ -65,6 +62,7 @@ newNode = malloc(sizeof(dlistint_t));
 	}
 	newNode->next = temp->next;
 	newNode->prev = temp;
+	temp->next->prev = newNode;
 	temp->next = newNode;
 	return (newNode);
 }
