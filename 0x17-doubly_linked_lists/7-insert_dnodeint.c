@@ -53,6 +53,8 @@ newNode = malloc(sizeof(dlistint_t));
 	listLen = dlistint_len(temp);
 	if (idx > listLen)
 		return (NULL);
+	if (idx == listLen)
+		return (add_dnodeint_end(h, n));
 	while ((idx - 1) > 0)
 	{
 		if (temp == NULL)
