@@ -54,9 +54,6 @@ newNode = malloc(sizeof(dlistint_t));
 		return (add_dnodeint_end(h, n));
 	while ((idx - 1) > 0)
 	{
-		if (temp == NULL)
-			free(newNode);
-		return (NULL);
 		temp = temp->next;
 		idx--;
 	}
