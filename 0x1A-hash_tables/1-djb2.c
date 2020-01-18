@@ -1,5 +1,5 @@
 /**
- * hash_djb2 -
+ * hash_djb2 -function
  * @str: string
  * Return: unsigned long int
  */
