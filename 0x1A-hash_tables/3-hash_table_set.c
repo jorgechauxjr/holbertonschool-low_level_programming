@@ -1,12 +1,9 @@
-#include <stdlib.h>
 #include "hash_tables.h"
-#include <string.h>
 /**
  * hash_table_set -function that adds an element to the hash table
  * @ht: hash table to add or update key/value
  * @key: key. Can not be empty string
  * @value: val associated with the key. must be duplicated
- * and can be an empty string
  * Return: 1 if succeeded, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
@@ -18,28 +15,36 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	idx = key_index((unsigned char *)key, ht->size);
-	tmp = ht->array[idx];
 
-		while (tmp != NULL)
+	for (tmp = ht->array[idx]; tmp != NULL; tmp = tmp->next)
 		{
 			if (strcmp(tmp->key, key) == 0)
 			{
+				free(tmp->value);
 				tmp->value = strdup(value);
+				if (tmp->value == NULL)
+					return (0);
 				return (1);
 			}
-			tmp = tmp->next;
 		}
 	newNode = malloc(sizeof(hash_node_t));
 	if (newNode == NULL)
 		return (0);
 
 	newNode->key = strdup(key);
+	if (newNode->key == NULL)
+	{
+		free(newNode);
+		return (0);
+	}
 	newNode->value = strdup(value);
-	newNode->next = NULL;
-
-	if (ht->array[idx] != NULL)
-		newNode->next = ht->array[idx];
-
+	if (newNode->value == NULL)
+	{
+		free(newNode->key);
+		free(newNode);
+		return (0);
+	}
+	newNode->next = ht->array[idx];
 	ht->array[idx] = newNode;
 	return (1);
 }
