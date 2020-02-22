@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
+
 def island_perimeter(grid):
     """ Returns the perimeter of the island described in grid"""
 
     hg = len(grid)
-    wd= len(grid[0])
+    wd = len(grid[0])
     island = 0
     edges = 0
 
@@ -16,6 +17,4 @@ def island_perimeter(grid):
                     edges = edges + 1
                 if (i > 0 and grid[i - 1][j] == 1):
                     edges = edges + 1
-    print(island)
-    print(edges)
     return (island * 4) - (edges * 2)
