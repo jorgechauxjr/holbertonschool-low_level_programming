@@ -1,4 +1,5 @@
 # 0x00. C - Hello, World
+![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/212/cisfun.jpg)
 ## Learning Objectives
 ### General
 - Why C programming is awesome (dont forget to tweet today, with the hashtag #cisfun :))
