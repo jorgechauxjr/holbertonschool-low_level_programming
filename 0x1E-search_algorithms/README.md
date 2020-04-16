@@ -21,7 +21,7 @@
 - Dont forget to push your header file
 - All your header files should be include guarded
 ## More Info
-#####You will be asked to write files containing big O notations. Please use this format:
+##### You will be asked to write files containing big O notations. Please use this format:
 - O(1)
 - O(n)
 - O(n!)
