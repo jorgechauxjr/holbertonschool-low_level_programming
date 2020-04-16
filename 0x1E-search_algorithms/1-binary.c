@@ -32,10 +32,7 @@ int binary_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
-	start = 0;
-	end = size - 1;
-
-	while (start <= end)
+	for (start = 0, end = size - 1; start <= end;)
 	{
 		print_array(array, start, end);
 		mid = (start + end) / 2;
